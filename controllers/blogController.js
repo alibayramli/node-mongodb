@@ -15,7 +15,7 @@ const blog_details = (req, res) => {
         res.render('blogs/details', {blog: result, title: 'Blog details'});
         console.log(res)
     })
-    .catch(err => console.log(err));
+    .catch(err => res.status(404).render('404', { title: '404' }));
 }
 
 const blog_create_get = (req, res) => {
